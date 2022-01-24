@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
+<script src="addQuote.js"></script>
     <head>
         <meta charset="UTF-8">
         <style>
@@ -13,17 +14,29 @@
                 text-align: center;
                 font-size: 16px;
             }
+            form {
+                width: 95%;
+                margin: 0 auto;
+            }
+            label {
+                width: 250px;
+                text-align: right;
+                display: flex;
+            }
         </style>
         <title>Add a Quote</title>
         <h1>Add a Quote to Xbox Playdates US</h1>
     </head> 
     <body>
-        <form>
-            <label>Quote: </label>
-            <label>Attribution: </label>
-            <label>Game: </label>
-            <label>Date of Quote: </label>
-        </form>
-        
+        <div id="quotearea">
+            <!-- action="https://www.xboxplaydates.us/api/addquote" method="post"-->
+            <form id="quoteform"> 
+                <label>Quote: </label> <input type="text" id="quotetext" name="quotetext"> <br>
+                <label>Attribution: </label> <input type="text" id="quoteattribution" name="quoteattribution"><br>
+                <label>Game: </label> <input type="text" id="quotegame" name="quotegame"><br>
+                <label>Date of Quote: </label> <input type="date" id="quotedate" name="quotedate"><br>
+                <input type="submit" value="Submit" style="margin-top:10px;" id='quotebutton'>
+            </form>
+        </div>
     </body>
 </html>
