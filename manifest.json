@@ -1,5 +1,5 @@
 {
-    "name": "playdatesBotExtension",
+    "name": "Xbox Playdates US Quotes",
     "version": "2.0",
     "manifest_version": 3,
     "icons": {
@@ -8,7 +8,7 @@
     "action": {
         "default_popup": "popup/index.html"
     },
-    "description": "This extension pulls up a quote logged during the Xbox Playdates US stream every Tuesday and Saturday evenings, at 9 and 8 Eastern respectively.  Most quotes are from Bowski; That's a feature, not a bug.  It will now also let you add a quote, if you want, I guess.",
+    "description": "Displays quote from XboxPlaydatesUS. It will now also let you add a quote, if you want, I guess.",
     "homepage_url": "https://www.xboxplaydates.us",
     "web_accessible_resoureces": [
         {
