@@ -84,10 +84,11 @@
         <div id="quotearea">
             <!-- action="https://www.xboxplaydates.us/api/addquote" method="post"-->
             <form id="quoteform"> 
-                <input type="text" class="rounded-input" id="quotetext" name="quotetext" placeholder="Quote"><br>
-                <input type="text" class="rounded-input" id="quoteattribution" name="quoteattribution" placeholder="Attribution"><br>
-                <input type="text" class="rounded-input" id="quotegame" name="quotegame" placeholder="Game"><br>
-                <input type="date" class="rounded-input" id="quotedate" name="quotedate" placeholder="Today"><br>
+                <input type="text" class="rounded-input" id="quotetext" name="quotetext" placeholder="Quote" required><br>
+                <input type="text" class="rounded-input" id="quoteattribution" name="quoteattribution" placeholder="Attribution" required><br>
+                <input type="text" class="rounded-input" id="quotegame" name="quotegame" placeholder="Game" required><br>
+                <input type="text" class="rounded-input" id="quotesubmitter" name="quotesubmitter" placeholder="Submitter" required><br>
+                <input type="date" class="rounded-input" id="quotedate" name="quotedate" placeholder="Today" required><br>
                 <input class="button" type="submit" value="Submit" id='button'>
             </form>
         </div>

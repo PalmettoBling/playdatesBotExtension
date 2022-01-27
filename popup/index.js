@@ -8,6 +8,7 @@ onload = function() {
         headers: headers
     }).then(photos => photos.json())
         .then(photos => {
+            console.log(photos);
             let imageNumber = Math.floor(Math.random() * 81);
             const photo = photos.photos[imageNumber];
             //const photo = photos.photos[0];
@@ -16,6 +17,15 @@ onload = function() {
             document.body.style.opacity = "0.7;"
     });
 
+    newquote();
+    
+    this.document.querySelector("#newquote").onclick = function(e) {
+        e.preventDefault();
+        newquote();   
+    }
+}
+
+function newquote() {
     const randomQuoteUrl = "https://www.xboxplaydates.us/playdatesQuotes/randomquote";
     let response = fetch(randomQuoteUrl)
         .then(response => response.json())
