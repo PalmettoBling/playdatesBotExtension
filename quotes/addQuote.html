@@ -5,23 +5,76 @@
         <meta charset="UTF-8">
         <style>
             body { 
-                width: 410px;
+                width: 300px;
+                max-height: 200px;
+                margin: 3px 0 0 3px;
+                position: relative;
+                float: left;
+                background-size: cover;
+                background-repeat: no-repeat;     
+                text-align: center;           
             }
-            button {
-                background-color: #0e7a0d;
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 900;
                 color: white;
-                padding: 10px 30px;
-                text-align: center;
-                font-size: 16px;
-            }
-            form {
-                width: 95%;
-                margin: 0 auto;
-            }
-            label {
-                width: 250px;
-                text-align: right;
+                text-shadow: 2px 2px 5px #000;
+                font-size: 1.25em;
                 display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 80%;
+                margin: 10px auto;
+                position: relative;
+                text-align: center;
+            }
+
+            h3 {
+                color: white;
+            }
+
+            input {
+                padding: 0.25em 0.5em;
+                border-radius: 4px;
+                transition: 180ms box-shadow ease-in-out;
+                margin: 10px 0;
+            }
+
+            input[type=text] {
+                padding: 10px;
+                box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+            }
+
+            input[type=date] {
+                padding: 10px;
+                box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+            }
+
+            input[type=text]:focus {
+                border-color: #000;
+            }
+
+            .rounded-input {
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .button {
+                -webkit-appearance: none;
+                appearance: none;
+                padding: 10px;
+                border: none;
+                background-color: #0e7a0d;
+                color: #fff;
+                font-weight: 600;
+                border-radius: 5px;
+            }
+
+            .button:hover {
+                background-color: darkgreen;
+                color: #fff;
+                box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
             }
         </style>
         <title>Add a Quote</title>
@@ -31,11 +84,11 @@
         <div id="quotearea">
             <!-- action="https://www.xboxplaydates.us/api/addquote" method="post"-->
             <form id="quoteform"> 
-                <label>Quote: </label> <input type="text" id="quotetext" name="quotetext"> <br>
-                <label>Attribution: </label> <input type="text" id="quoteattribution" name="quoteattribution"><br>
-                <label>Game: </label> <input type="text" id="quotegame" name="quotegame"><br>
-                <label>Date of Quote: </label> <input type="date" id="quotedate" name="quotedate"><br>
-                <input type="submit" value="Submit" style="margin-top:10px;" id='quotebutton'>
+                <input type="text" class="rounded-input" id="quotetext" name="quotetext" placeholder="Quote"><br>
+                <input type="text" class="rounded-input" id="quoteattribution" name="quoteattribution" placeholder="Attribution"><br>
+                <input type="text" class="rounded-input" id="quotegame" name="quotegame" placeholder="Game"><br>
+                <input type="date" class="rounded-input" id="quotedate" name="quotedate" placeholder="Today"><br>
+                <input class="button" type="submit" value="Submit" id='button'>
             </form>
         </div>
     </body>

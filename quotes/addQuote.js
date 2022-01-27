@@ -8,6 +8,9 @@ if (formsubmission) {
 }
 */
 onload = function() {
+    this.document.body.style.backgroundImage = "url(blank-sheet.jpg";
+    document.body.style.background = "rgba(0, 0, 0, 0.8);"
+    document.body.style.opacity = "0.7;"
     document.querySelector('#quoteform').onsubmit = function(e) {
         e.preventDefault();
         var quotetext = document.forms["quoteform"]["quotetext"];
