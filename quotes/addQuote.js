@@ -1,12 +1,3 @@
-/*let formsubmission = document.getElementById("quotebutton");
-if (formsubmission) {
-    formsubmission.onclick = function() {
-        document.getElementById('quoteform').reset();
-        document.getElementById('quotearea').innerHTML +=
-            "<h3>Quote has been submitted for review.</h3>";
-    }
-}
-*/
 onload = function() {
     this.document.body.style.backgroundImage = "url(blank-sheet.jpg";
     document.body.style.background = "rgba(0, 0, 0, 0.8);"
@@ -17,6 +8,7 @@ onload = function() {
         var quoteattribution = document.forms["quoteform"]["quoteattribution"]
         var quotegame = document.forms["quoteform"]["quotegame"];
         var quotedate = document.forms["quoteform"]["quotedate"];
+        var quotesubmitter = document.forms["quoteform"]["quotesubmitter"];
     
         let addQuoteUrl = "https://www.xboxplaydates.us/api/addquote";
         let response = fetch(addQuoteUrl, {
@@ -25,7 +17,8 @@ onload = function() {
                 "quotetext": quotetext.value,
                 "quoteattribution": quoteattribution.value,
                 "quotegame": quotegame.value,
-                "quotedate": quotedate.value
+                "quotedate": quotedate.value,
+                "quoteauthor": quotesubmitter.value
             }),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
